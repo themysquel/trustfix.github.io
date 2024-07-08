@@ -1,0 +1,363 @@
+/*///////////////  INDEX.HTML CSS FÁJL /////////////// 
+
+/* Minden oldalra vonatkozó css előtt importálni a style.css-t*/
+@import url(style.css);
+
+header{
+    width: 100%;
+    height: 100vh; /* Az elem magassága a nézőablak magasságához igazodik */
+    background: url(/images/hero-bg.png) center center/cover no-repeat;
+    position: relative;
+    overflow: hidden;
+}
+
+/*HERO SZEKCIÓ BELEÁGYAZVA A HEADERBE*/
+
+#hero{
+    display: flex;
+    max-width: 1200px; /* Maximális szélesség 1440px */
+    margin: 0rem auto; /* Középre igazítás */
+    display: flex;
+    justify-content: flex-start;
+    align-items: start;
+    overflow-wrap: break-word;
+}
+
+.hero-content{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 2rem;
+    padding: 5rem 0;
+}
+
+#hero img{
+    height: auto;
+    max-width: 100%;
+    vertical-align: top;
+}
+
+/*SZOLGÁLTATÁS SWIPER SZEKCIÓ*/
+.service-swiper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 5rem auto;
+    width: 100%;
+    position: relative;
+}
+
+.service-swiper i{
+    top: 50%;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    font-size: 1.25rem;
+    position: absolute;
+    text-align: center;
+    line-height: 50px;
+    background: var(--btn-font);
+    border-radius: 50%;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.23);
+    transform: translateY(-50%);
+    transition: transform 0.1s linear;
+}
+.service-swiper i:active{
+    transform: translateY(-50%) scale(0.85);
+}
+
+.service-swiper i:first-child{left: -22px;}
+.service-swiper i:last-child{right: -22px;}
+
+.swiper-carousel{
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc((100% / 3) - 12px);
+    overflow-x:hidden;
+    scroll-snap-type: x mandatory;
+    gap: 16px;
+    border-radius: 8px;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+}
+
+.swiper-carousel::-webkit-scrollbar {
+    display: none;
+}
+.swiper-carousel.no-transition {
+    scroll-behavior: auto;
+}
+.swiper-carousel.dragging {
+    scroll-snap-type: none;
+    scroll-behavior: auto;
+}
+.swiper-carousel.dragging .swiper-card {
+    cursor: grab;
+    user-select: none;
+}
+
+.swiper-card{
+    scroll-snap-align: start;
+    height: 342px;
+    list-style: none;
+    padding-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    border-radius: 15px;
+    background-color: rgba(0, 0, 0, 0.178);
+    background-blend-mode: multiply;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.swiper-card-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.068), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border:1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+.swiper-card h2 a{
+    color: var(--white);
+    text-transform: capitalize;
+    font-size: 1.75rem;
+}
+
+.swiper-card span{
+    color: var(--btn-bg);
+    font-size: 1.25rem;
+}
+
+
+/*SZOLGÁLTATÁSOK SZEKCIÓ*/
+
+#services {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.card {
+    background-color: white;
+    overflow: hidden;
+    flex: 1 1 calc(33.333% - 20px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: calc(33.333% - 20px);
+    position: relative;
+    z-index: 1;
+}
+
+.card-title{
+    font-size: 1.75rem;
+    color: var(--title-blue);
+    font-weight: 700;
+    text-transform: capitalize;
+    line-height: 1.1;
+    margin: 49px 0 5px; /* A cím lejebb kerül a tetején lévő képtől*/
+}
+
+.special-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+}
+.special-title{
+    color: var(--title-blue);
+    font-size: 3rem;
+    font-weight: 300;
+    letter-spacing: -.016em;
+    line-height: 1.2;
+    text-transform: capitalize;
+}
+.img-container{position: relative;}
+.img-container::after{ /* Zöld kör a kép alatt*/
+    content: '';
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(to top,#fcfcfc 20%,#1bdd88);
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    bottom: -30px;
+    z-index: -1;
+}
+.card img {
+    max-width: 100px;
+    width: auto;
+    height: auto;
+    object-fit: cover;
+    position: relative;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 25px 0 5px;
+    padding: 1rem 0;
+    border-top: 1px solid #ddd;
+}
+
+.card-price{
+    color: var(--title-blue);
+    font-weight: 600;
+    font-size: 0.8rem;
+}
+
+.services-btn {
+    background-color: #007bff;
+    color: var(--white);
+    border: none;
+    text-transform: none;
+    padding: 10px 20px;
+    border-radius: 30px;
+    display: inline-block;
+    cursor: pointer;
+    font-size: 0.8rem;
+    transition: all 0.3s ease-in-out;
+    margin-right: 15px;
+}
+
+.services-btn:hover {
+    transform: scale(1.1);
+}
+
+/*ABOUT US SZEKCIÓ*/
+#about-us{
+    max-width: 1200px;
+    margin: 5rem auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 20px;
+    height: 50vh;
+}
+
+#about-us img{
+    width: 38%;
+    height: auto;
+    border-radius: 25px;
+    object-fit: cover;
+}
+.about-us-content{
+    width: 58%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+
+}
+.about-us-content h3{margin-top: -2rem;}
+
+/*GYAKRAN ISMÉTELT KÉRDÉSEK SZEKCIÓ*/
+#faq{
+    max-width: 1200px;
+    margin: 5rem auto;
+    text-align: center;
+}
+
+.faq-container{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: flex-start;
+    margin: 4rem 0;
+    gap: 30px;
+}
+
+.faq-content{
+    flex: 1 1 45%;
+    padding: 20px 0;
+    text-align: start;
+
+}
+.faq-content h3{
+    color: var(--btn-font);
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+.faq-content p{
+    color: var(--btn-font);
+}
+
+.faq-button{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.faq-button a:nth-child(1){
+    background-color: var(--btn-font);
+    color: var(--white);
+}
+
+/*FOOTER*/
+
+
+/* Swiper Tableten 2 kártya mutatása */
+@media screen and (max-width: 900px) {
+    .swiper-carousel {
+      grid-auto-columns: calc((100% / 2) - 9px);
+    }
+  }
+  
+/* Mobil Nézet */
+@media screen and (max-width: 768px) {
+
+    header{
+        background: url('/images/hero-bg-mobile.png') center center/cover no-repeat;
+    }
+    
+
+    #hero{
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+
+    }
+
+    #hero img{
+        width: 100%;
+
+    }
+    .hero-content{padding: 1rem 0;}
+
+    .swiper-carousel {
+        grid-auto-columns: 100%;
+    }  
+
+    .service-swiper i:first-child{left: 0;} /*Mobil nézetben a carousel nyila a képernyő szélére*/
+    .service-swiper i:last-child{right: 0;} /*Mobil nézetben a carousel nyila a képernyő szélére*/
+
+    .card, .faq-content {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+    .special-title{font-size: 2.5rem;}
+
+    #about-us{
+        flex-direction: column;
+        height: auto;
+    }
+    #about-us img, .about-us-content{width: 100%;}
+    .about-us-content{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+ 
+}

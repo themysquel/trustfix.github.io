@@ -1,0 +1,271 @@
+/*ALAP STÍLUS BEÁLLÍTÁSOKRA SZOLGÁLÓ CSS*/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Színek definiálása*/
+:root {
+    --text-green: rgb(50, 235, 154); /* Zöld ami az active menüben van */
+    --text-grey: #b3bec8; /* szürke mint ami a nem active menü  */
+    --btn-bg: #27e491; /* gomb háttér */
+    --btn-font: #032549; /* gomb szöveg szín */
+    --white: white; /* gomb szöveg szín */
+    --title-blue: #083260;
+}
+
+/* Betűkészlet és alapértelmezett stílusok */
+body {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    color: #ffffff;
+    letter-spacing: 0.224px;
+    overflow-x: hidden;
+}
+
+/* Link stílusok */
+ul{list-style-type: none;}
+
+a {text-decoration: none;}
+
+h1{
+    font-size: 3.125rem;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+p{
+    color: var(--text-grey);
+}
+
+.title{
+    font-size: 3rem;
+    color: var(--title-blue);
+    letter-spacing: -.016em;
+    line-height: 1.2;
+    font-weight: 300;
+}
+
+.subtitle{
+    font-size: 1.125rem;
+    color: var(--btn-bg);
+    margin-bottom: 22px;
+    font-weight: 600;
+}
+
+.btn{
+    background: var(--btn-bg);
+    font-size: 0.875rem;
+    color: var(--btn-font);
+    border: 2px solid transparent;
+    text-transform: none;
+    padding: 14px 30px;
+    border-radius: 30px;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    line-height: 19px;
+    font-weight: 600;
+    transition: all 0.3s ease-in-out;
+}
+.btn:hover {
+    transform: scale(1.1);
+}
+
+/* NAVBAR GÉPES */
+
+.navbar {
+    max-width: 1200px; /* Maximális szélesség 1440px */
+    margin: 2rem auto; /* Középre igazítás */
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+}
+
+.logo img {
+    height: 50px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+
+.nav-links li {
+    position: relative;
+    padding: 0 15px;
+}
+
+.nav-links li a {
+    color: var(--text-grey);
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+    font-weight: 500;
+}
+.nav-links li a:hover {color: var(--text-green);} /* Ráhúzáskor megváltozik a menü színe */
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    border-radius: 0px 15px 15px 15px;
+    padding: 10px;
+    z-index: 1;
+    top: 100%; /* Dropdown menü alatt jelenjen meg */
+    left: 20px;
+    width: 200px; /* Szélesség beállítása */
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu.show {
+    display: block; /* Aktív dropdown menü megjelenítése */
+}
+
+.dropdown-menu li {
+    padding: 5px 0;
+}
+
+.dropdown-menu li a {
+    color: var(--btn-font);
+    text-decoration: none;
+    display: block;
+    padding: 8px 10px;
+}
+
+.dropdown-menu li:hover {
+    color: var(--btn-bg);
+}
+
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+}
+
+/* Font Awesome ikonok */
+
+.fa-bars,
+.fa-chevron-down {
+    margin-left: 5px;
+}
+
+/* FOOTER GÉPES */
+footer{
+    background-color: var(--btn-font);
+    align-items: center;
+    align-content: center;
+    padding: 4rem 0 1rem 0;
+}
+
+.footer-container{
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.footer-content:nth-child(1), .footer-content:nth-child(2){
+    width: 30%;
+}
+.footer-content:nth-child(2), .footer-content:nth-child(3){
+    width: 15%;
+}
+.footer-content h2, img{margin-bottom: 1rem;}
+
+.footer-content li {padding-bottom: 5px;}
+.footer-content li a{
+    color: var(--text-grey);
+}
+.footer-content li a:hover{
+    color: var(--btn-bg);
+}
+
+.footer-social{
+    margin-top: 1rem;
+    display: flex;
+    gap: 20px;
+}
+.footer-social i{
+    font-size: 15px;
+    color: var(--white);
+}
+.footer-social i:hover{
+    color: var(--btn-bg);
+}
+
+.credit{
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0.5rem;
+    text-align: center;
+    background-color: var(--btn-bg);
+    border-radius: 15px;
+}
+.credit p{color: var(--title-blue);}
+
+@media screen and (max-width: 768px) {
+    h1{font-size: 1.8rem;}
+    section {padding: 0 2rem;} /* MOBIL NÉZET PADDING A SZEKCIÓKNAK */ 
+    .title{font-size: 2.5rem;}
+    .subtitle{font-size: 1rem;}
+
+    .navbar{
+        padding: 0 2rem;
+        z-index: 100;
+    }
+
+    .nav-links {
+
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        left: -100%; /* Kezdő pozíció a képernyőn kívül */
+        height: 100%;
+        width: 50%; /* Fél képernyős szélesség */
+        background-color: #ffffff;
+        padding: 10px;
+        z-index: 1;
+        transition: left 0.3s ease; /* Animáció hozzáadása */
+    }
+
+    .nav-links.active {
+        left: 0; /* Aktív állapotban bal oldalról beúszik */
+    }
+
+    .menu-toggle {
+        display: block; /* Hamburger ikon megjelenítése mobil nézeten */
+        cursor: pointer;
+    }
+
+    .dropdown-menu {
+        position: static; /* Dropdown menü normál pozícióban */
+        display: none; /* Alapból rejtett mobil nézetben */
+        width: 100%; /* Teljes szélesség */
+    }
+
+    .dropdown-menu.show {
+        display: block; /* Aktív dropdown menü megjelenítése */
+    }
+    
+    footer{padding: 4rem 2rem 0rem 2rem;}
+    .footer-container{flex-direction: column;}
+    .footer-content:nth-child(1), .footer-content:nth-child(2), .footer-content:nth-child(3), .footer-content:nth-child(4){width: 100%;}
+    .footer-content h2{margin-top: 2rem;}
+
+}
+

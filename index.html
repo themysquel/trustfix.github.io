@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+
+    <!--ÚJ OLDALNÁL HIVATKOZÁSOK:
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <script src="js/main.js" defer></script>
+    <script src="js/navbar.js" defer></script>
+    <script src="js/footer.js" defer></script>
+    -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iPhone Szerviz</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="logo.png" alt="Logo">
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html" style="color: #27e491;">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#">Szolgáltatások <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Akkumulátor csere</a></li>
+                            <li><a href="#">Kijelző csere</a></li>
+                            <li><a href="#">Töltőport csere</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="https://trustphone.hu/">Webshop</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="contact.html">Kapcsolat</a></li>
+                </ul>
+            </nav>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+        <section id="hero">
+            <div class="hero-content">
+                <h1>Gyári Kijelző Csere<br>nálunk a legolcsóbb szöveg</h1>
+                <p>Accidents happen, and it’s our job to fix them when it comes to damaging your mobile device. It’s never been easier to render your device useless after dropping it. Our trained technicians will diagnose and repair your device within 24 hours.</p>
+                <a class="btn" href=""><span>Fix my Device <i class="fa fa-angle-right"></i></span></a>
+            </div>
+            <img src="images/iPhone-X.webp" alt="iphone cracked screen">
+        </section>
+    </header>
+    <main>
+        <section class="service-swiper">
+            <i id="left" class="fa-solid fa-angle-left"></i>
+            <ul class="swiper-carousel">
+                <li class="swiper-card" style="background-image: url(images/screen-carousel.webp)">
+                    <div class="swiper-card-content">
+                        <h2><a href="">Kijelző felújítás</a></h2>
+                        <span>60.000 Ft-tól</span>
+                    </div>
+                </li>
+                <li class="swiper-card" style="background-image: url(images/battery-carousel.webp)">
+                    <div class="swiper-card-content">
+                        <h2><a href="">Akkumulátor Csere</a></h2>
+                        <span>60.000 Ft-tól</span>
+                    </div>
+                </li>
+                <li class="swiper-card" style="background-image: url(images/camera-carousel.webp)">
+                    <div class="swiper-card-content">
+                        <h2><a href="">Kamera javítás</a></h2>
+                        <span>60.000 Ft-tól</span>
+                    </div>
+                </li>
+                <li class="swiper-card" style="background-image: url(images/speaker-carousel.webp)">
+                    <div class="swiper-card-content">
+                        <h2><a href="">Hangszóró Javítás</a></h2>
+                        <span>60.000 Ft-tól</span>
+                    </div>
+                </li>
+                <li class="swiper-card" style="background-image: url(images/water-damage-carousel.webp)">
+                    <div class="swiper-card-content">
+                        <h2><a href="">Beázás Javítás</a></h2>
+                        <span>60.000 Ft-tól</span>
+                    </div>
+                </li>
+                <li class="swiper-card" style="background-image: url(images/home-btn-carousel.webp)">
+                    <div class="swiper-card-content">
+                        <h2><a href="">Home Gomb Javítás</a></h2>
+                        <span>60.000 Ft-tól</span>
+                    </div>
+                </li>
+            </ul>
+            <i id="swiper-right" class="fa-solid fa-angle-right"></i>
+        </section>
+        <section id="services">
+            <div class="card special-card">
+                <p class="subtitle">Miben tudunk segíteni</p>
+                <p class="special-title">Gyors Segítség Készülékének</p>
+            </div>
+            <div class="card">
+                <div class="img-container">
+                <img src="images/cracked-screen.webp" alt="betört kijelző iphone">
+                </div>
+                <h2 class="card-title">Kártya Cím 1</h2>
+                <p>Rövid leírás 1.</p>
+                <div class="card-footer">
+                    <p class="card-price">100.000 Ft-tól</p>
+                    <a class="services-btn" href=""><span>Érdekel <i class="fa fa-angle-right"></i></span></a>
+                </div>
+            </div>
+            <div class="card">
+            <div class="img-container">
+                <img src="images/cracked-screen-2.webp" alt="Törött hátlap">
+            </div>
+            <h2 class="card-title">Kártya Cím Törött hátlap</h2>
+            <p>Rövid leírás 5.</p>
+            <div class="card-footer">
+                <p class="card-price">60.000 Ft-tól</p>
+                <a class="services-btn" href=""><span>Érdekel <i class="fa fa-angle-right"></i></span></a>
+            </div>
+            </div>
+            <div class="card">
+                <div class="img-container">
+                <img src="images/water-damage.webp" alt="beázott iphone">
+                </div>
+                <h2 class="card-title">Kártya Cím 1</h2>
+                <p>Rövid leírás 2.</p>
+                <div class="card-footer">
+                    <p class="card-price">1.000 Ft-tól</p>
+                    <a class="services-btn" href=""><span>Érdekel <i class="fa fa-angle-right"></i></span></a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="img-container">
+                <img src="images/poor-battery.webp" alt="Hamar merülő iphone">
+                </div>
+                <h2 class="card-title">Kártya Cím 1</h2>
+                <p>Rövid leírás 3.</p>
+                <div class="card-footer">
+                    <p class="card-price">100.000 Ft-tól</p>
+                    <a class="services-btn" href=""><span>Érdekel <i class="fa fa-angle-right"></i></span></a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="img-container">
+                <img src="images/no-sound.webp" alt="Nincs hang iphone">
+                </div>
+                <h2 class="card-title">Kártya Cím 1</h2>
+                <p>Rövid leírás 4.</p>
+                <div class="card-footer">
+                    <p class="card-price">100.000 Ft-tól</p>
+                    <a class="services-btn" href=""><span>Érdekel <i class="fa fa-angle-right"></i></span></a>
+                </div>
+            </div>
+        </section>
+        <section id="about-us">
+            <img src="images/about-us.png" alt="Rólunk">
+            <div class="about-us-content">
+                <p class="subtitle">Professional Repair Technicians</p>
+                <h3 class="title">Eszközöd a legjobb kezekben</h3>
+                <p style="color: rgba(3,37,73,.66);">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, ex facere asperiores est, non deserunt ab aperiam quidem dolor culpa suscipit modi facilis enim repellat dolore mollitia sit ut! Iure dignissimos quibusdam nihil ducimus eos ipsam perspiciatis harum laboriosam animi deleniti aliquid repellendus, at dolore iste vero tempora, voluptatem provident.</p>
+                <p style="color: rgba(3,37,73,.66);">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus quasi, neque ipsam soluta officia magni voluptates. Sunt tempore maiores laudantium fuga quod iste expedita quasi laborum iure debitis. Ex, sint.</p>
+                <a class="btn" href=""><span>Rólunk bővebben <i class="fa fa-angle-right"></i></span></a>
+            </div>
+        </section>
+        <section id="faq">
+            <p class="subtitle">Kérdezz tőlünk!</p>
+            <h2 class="title">Gyakran Ismételt kérdések</h2>
+            <div class="faq-container">
+                <div class="faq-content">
+                    <h3>My Device Doesn’t Switch On</h3>
+                    <p>An electronic device not switching on can be the result of many things. Most commonly there is a fault with the mainboard or the battery. We can diagnose a range of issues and replace only what's needed to be.</p>
+                </div>
+                <div class="faq-content">
+                    <h3>My Device Doesn’t Switch On</h3>
+                    <p>An electronic device not switching on can be the result of many things. Most commonly there is a fault with the mainboard or the battery. We can diagnose a range of issues and replace only what's needed to be.</p>
+                </div>
+                <div class="faq-content">
+                    <h3>My Device Doesn’t Switch On</h3>
+                    <p>An electronic device not switching on can be the result of many things. Most commonly there is a fault with the mainboard or the battery. We can diagnose a range of issues and replace only what's needed to be.</p>
+                </div>
+                <div class="faq-content">
+                    <h3>My Device Doesn’t Switch On</h3>
+                    <p>An electronic device not switching on can be the result of many things. Most commonly there is a fault with the mainboard or the battery. We can diagnose a range of issues and replace only what's needed to be.</p>
+                </div>
+            </div>
+            <div class="faq-button">
+                <a class="btn" href=""><span>További kérdések <i class="fa fa-angle-right"></i></span></a>
+                <a class="btn" href=""><span>Szervíz szolgáltatások <i class="fa fa-angle-right"></i></span></a>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-content">
+                <img src="" alt="Logo">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe quam soluta facilis, aliquam provident natus doloribus ab error! Fugiat, mollitia!</p>
+                <div class="footer-social">
+                    <a href=""><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href=""><i class="fa-brands fa-instagram"></i></a>
+                    <a href=""><i class="fa-brands fa-tiktok"></i></a>
+                </div>
+            </div>
+            <div class="footer-content">
+                <h2>Oldalak</h2>
+                <ul class="footer-pages">
+                    <li><a href="">Home</a></li>
+                    <li><a href="">Szolgáltatások</a></li>
+                    <li><a href="">Shop</a></li>
+                    <li><a href="">FAQ</a></li>
+                    <li><a href="">Kapcsolat</a></li>
+                </ul>
+            </div>
+            <div class="footer-content">
+                <h2>Szervíz</h2>
+                <ul class="footer-services">
+                    <li><a href="">Kijelző csere</a></li>
+                    <li><a href="">Akkumulátor csere</a></li>
+                    <li><a href="">Beázott telefon</a></li>
+                    <li><a href="">Home gomb javítás</a></li>
+                    <li><a href="">Home gomb javítás</a></li>
+                </ul>
+            </div>
+            <div class="footer-content">
+                <h2>Kapcsolat</h2>
+                <p><span>Telefonszám:</span> +36 20 256 7894</p>
+                <p><span>Email</span> info@valami.hu</p>
+                <p><span>Címünk</span> 1153 Budapest, Pázmány Péter utca 10</p>
+            </div>
+        </div>
+        <div class="credit">
+            <p>TrustFix X Nuubie &copy;
+                <script type="text/javascript">
+                  document.write(new Date().getFullYear());
+                </script>
+            </p>
+        </div>
+    </footer>
+    <script src="js/main.js" defer></script>
+</body>
+</html>

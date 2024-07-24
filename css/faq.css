@@ -1,0 +1,149 @@
+@import url(style.css);
+
+section{
+    max-width: 1200px;
+    margin: 4rem auto;
+}
+
+.FAQ h2{
+    color: var(--title-blue);
+    font-size: 1.5rem;
+    letter-spacing: -.016em;
+    line-height: 1.1;
+    font-weight: 400;
+}
+
+.FAQ h3{
+    color: var(--title-blue);
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+.FAQ p{
+    color: black;
+}
+
+.FAQ{
+    display: flex;
+    gap: 2rem;
+}
+
+.card-bg{
+    background: white;
+    border: 1px solid #e3e6ea;
+    border-radius: 30px;
+    box-shadow: 0 0 65px 22px rgba(35,35,35,8%);
+    padding: 1rem 0rem 1rem 1.5rem;
+}
+
+.sidebar{
+    flex: 1;
+}
+
+
+.faq-nav{
+    margin-bottom: 2rem;
+}
+
+.faq-nav ul li{
+    margin-bottom: 1rem;
+}
+.faq-nav ul li a{
+    color: var(--title-blue);
+    font-size: 1.25rem;
+}
+
+.cant-find-answer{
+    border: 2px solid #ffc107;
+    background-color: #f6f6f6;
+}
+
+.cant-find-answer p{
+    color: var(--title-blue);
+}
+
+.cant-find-answer > * {
+    margin-bottom: 1rem;
+}
+
+.content{
+    flex: 2;
+    height: fit-content;
+    padding: 2rem;
+}
+
+.container{
+    padding: 1rem;
+}
+
+.category{
+    color: var(--title-blue);
+}
+
+.category h2{
+    margin-bottom: 1.5rem;
+}
+
+.question-container{
+    background: #fcfcfc;
+    border-radius: 25px;
+    border: 1px solid #e3e6ea;
+    padding: 1rem 0rem 1rem 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.question{
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+.answer.expanded {
+    max-height: 300px;
+}
+
+.selected-category {
+    font-weight: bold;
+}
+
+@media screen and (max-width: 768px) {
+    .FAQ{
+        flex-direction: column;
+        gap: 0rem;
+    }
+
+    .FAQ h2{
+        font-size: 1.25rem;
+    }
+
+    .FAQ h3{
+        font-size: 1rem;
+    }
+
+    .faq-nav ul li a{
+        font-size: 1rem;
+    }
+
+    .sidebar{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .cant-find-answer{
+        margin-bottom: 4rem;
+    }
+
+    .container{
+        padding: 0;
+    }
+
+    .question{
+        font-size: 0.875rem;
+    }
+
+}

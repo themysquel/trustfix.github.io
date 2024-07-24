@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gyakran Ismételt Kérdések</title>
+    <style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    background-color: #f0f0f0;
+}
+
+.image-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.image {
+    display: block;
+    width: 200px;
+    height: auto;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.308); /* sötétkék háttér */
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    transition: background-color 0.3s;
+    text-align: center;
+    padding: 20px;
+    overflow: hidden; /* biztosítja, hogy a szöveg és a gomb nem lógjon ki */
+}
+
+.text {
+    font-size: 20px;
+    margin-bottom: 10px;
+    transition: transform 0.3s; /* sima animáció a szöveg elmozdulásához */
+}
+
+.button {
+    background-color: #fff;
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: opacity 0.3s;
+    opacity: 0; /* gomb alapértelmezett rejtett állapota */
+}
+
+.image-wrapper:hover .overlay {
+    background-color: rgba(0, 0, 139, 0.9); /* sötétkék háttér, amikor az egér a kép fölött van */
+}
+
+.image-wrapper:hover .text {
+    transform: translateY(-30px); /* szöveg elmozdítása felfelé */
+}
+
+.image-wrapper:hover .button {
+    opacity: 1; /* gomb láthatóvá válik, amikor az egér a kép fölött van */
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="image-wrapper">
+            <img src="images/Apple-Iphone-15-Green-PNG.png" alt="Kép" class="image">
+            <div class="overlay">
+                <div class="text">Kamera csere</div>
+                <button class="button">Tovább</button>
+            </div>
+        </div>
+    </div>
+    <svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg"> <g clip-path="url(#clip0_221_10)"> <path d="M0 0H100C155.228 0 200 44.7715 200 100V200H100C44.7715 200 0 155.228 0 100V0Z" fill="url(#paint0_linear_221_10)"/> </g> <defs> <linearGradient id="paint0_linear_221_10" x1="100" y1="0" x2="100" y2="200" gradientUnits="userSpaceOnUse"> <stop stop-color="#A7B5FF"/> <stop offset="1" stop-color="#F3ACFF"/> </linearGradient> <clipPath id="clip0_221_10"> <rect width="200" height="200" fill="white"/> </clipPath> </defs> </svg>
+</body>
+</html>
+

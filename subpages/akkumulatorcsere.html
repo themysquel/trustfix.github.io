@@ -3,15 +3,15 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Contact</title>
+        <title>Akkumulátor Csere</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="css/contact.css">
+        <link rel="stylesheet" href="../css/style.css">
+        <link rel="stylesheet" href="../css/services-sub.css">
     </head>
     <body class="body-bg">
         <header class="not-home-header">
@@ -21,18 +21,18 @@
                 </div>
                 <nav>
                     <ul class="nav-links">
-                        <li><a href="index.html">Home</a></li>
+                        <li><a href="../index.html">Home</a></li>
                         <li class="dropdown">
-                            <a href="services.html">Szolgáltatások <i class="fas fa-chevron-down"></i></a>
+                            <a href="../services.html">Szolgáltatások <i class="fas fa-chevron-down"></i></a>
                             <ul class="dropdown-menu">
-                                <li><a href="#">Akkumulátor csere</a></li>
+                                <li><a href="../subpages/akkumulatorcsere.html">Akkumulátor csere</a></li>
                                 <li><a href="#">Kijelző csere</a></li>
                                 <li><a href="#">Töltőport csere</a></li>
                             </ul>
                         </li>
                         <li><a href="https://trustphone.hu/">Webshop</a></li>
-                        <li><a href="faq.html">FAQ</a></li>
-                        <li><a href="contact.html" style="color: #27e491;">Kapcsolat</a></li>
+                        <li><a href="../faq.html">FAQ</a></li>
+                        <li><a href="../contact.html">Kapcsolat</a></li>
                     </ul>
                 </nav>
                 <div class="menu-toggle">
@@ -40,46 +40,32 @@
                 </div>
             </nav>
             <div class="header-h1">
-                <h1>Elérhetőségünk</h1>
+                <a href="../services.html" class="backToServiceBtn"><span><i class="fa-solid fa-chevron-left"></i></span>Szolgáltatások</a>
+                <h1>Akkumulátor Csere</h1>
+                <p class="fast-service-badge"><span><i class="fa-regular fa-clock"></i></span>Személyesen 1 órán belül</p>
             </div>
             
         </header>
         <main>
-            <section class="contact-shop">
-                <p class="subtitle"> Ha személyesen jönnél hozzánk</p>
-                <h2 class="title">Szervízünk Elérhetősége</h2>
-                <div class="shop-card">
-                    <p>BUDAPEST</p>
-                    <p>1152 Budapest, Pázmány Péter utca 1.</p>
-                    <p>Tel: +36 20 405 1545</p>
-                    <h3 class="contact-h3">Nyitvatartás</h2>
-                    <div class="nyitvatartas">
-                        <div>
-                            <p>Hétfőtől - Péntekig</p>
-                            <p>Szombat:</p>
-                            <p>Vasárnap és ünnepnapokon:</p>
-                        </div>
-                        <div>
-                            <p>10:30 - 18:30</p>
-                            <p>10:30 - 18:30</p>
-                            <p>Zárva</p>
-                        </div>
+            <section class="promo">
+                <h2 class="title">Mikor érdemes cserélni?</h2>
+                <div class="container">
+                    <div class="card">
+                        <h3>Gyorsan lemerül</h3>
+                        <p>Ha a telefonod gyorsabban merül, mint korábban, és nem bírja ki a napot töltés nélkül.</p>
                     </div>
-                </div>
-                <div class="google-map">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2692.312497278083!2d19.109736376895405!3d47.56170797118578!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4741c38ffb97a573%3A0xe97f334755a94b1!2sTrust%20Phone!5e0!3m2!1shu!2shu!4v1720740431115!5m2!1shu!2shu" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div>
-            </section>
-            <section class="contact-shipping">
-                <p class="subtitle"> Ha szervízfutárt szeretnél</p>
-                <h2 class="title">Szervízfutár küldés</h2>
-                <div class="shipping-card">
-                    <p>Figyelem: Fontos ,hogy telefonodat megfelelően csomagold be</p>
-                    <p>Csomagküldés előtt előzetes egyeztetés szükséges</p>
-                    <h3 class="contact-h3">Címünk a csomagküldéshez: </h3>
-                    <p>Címzett: KD Phone Kft.</p>
-                    <p>1152 Budapest, Pázmány Péter utca 10.</p>
-                    <a href="" class="btn">Szervízfutár bővebben</a>
+                    <div class="card">
+                        <h3>Váratlan kikapcsolások:</h3>
+                        <p>A telefon váratlanul kikapcsol, még akkor is, ha az akkumulátor nincs teljesen lemerülve.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Teljesítménycsökkenés:</h3>
+                        <p>Lassabb működés vagy gyakori laggolás tapasztalható.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Akkumulátor állapota:</h3>
+                        <p>Az iPhone beállításaiban az akkumulátor állapotát ellenőrizheted. Ha a maximális kapacitás 80% alá esik, cserére lehet szükség.</p>
+                    </div>
                 </div>
             </section>
         </main>
@@ -129,6 +115,6 @@
                 </p>
             </div>
         </footer>
-    <script src="js/main.js" async defer></script>
+    <script src="../js/main.js" async defer></script>
     </body>
 </html>

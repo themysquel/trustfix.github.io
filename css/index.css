@@ -21,6 +21,7 @@ header{
     justify-content: flex-start;
     align-items: start;
     overflow-wrap: break-word;
+    animation: SlideDownAndBounce 0.7s ease-out;
 }
 
 .hero-content{
@@ -35,6 +36,19 @@ header{
     height: auto;
     max-width: 100%;
     vertical-align: top;
+    
+}
+
+@keyframes SlideDownAndBounce{
+    0%{
+        transform:translateY(-500px);
+    }
+    50%, 100%{
+        transform:translateY(0);
+    }
+    70%{
+        transform:translateY(-30px);
+    }
 }
 
 /*SZOLGÁLTATÁS SWIPER SZEKCIÓ*/

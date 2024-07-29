@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Szolgáltatások</title>
+        <title>FAQ</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -11,7 +11,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="css/services.css">
+        <link rel="stylesheet" href="css/faq.css">
     </head>
     <body class="body-bg">
         <header class="not-home-header">
@@ -23,85 +23,86 @@
                     <ul class="nav-links">
                         <li><a href="index.html">Home</a></li>
                         <li class="dropdown">
-                            <div class="dropdown-link-container">
-                                <a href="services.html" style="color: #27e491;">Szolgáltatások <i class="fas fa-chevron-down"></i></a>
-                                <span class="dropdown-btn"><i class="fas fa-chevron-down"></i></span>
-                            </div>
+                            <a href="services.html">Szolgáltatások <i class="fas fa-chevron-down"></i></a>
                             <ul class="dropdown-menu">
-                                <li><a href="subpages/akkumulatorcsere.html">Akkumulátor csere</a></li>
+                                <li><a href="#">Akkumulátor csere</a></li>
                                 <li><a href="#">Kijelző csere</a></li>
                                 <li><a href="#">Töltőport csere</a></li>
                             </ul>
                         </li>
                         <li><a href="https://trustphone.hu/">Webshop</a></li>
-                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="faq.html" style="color: #27e491;">FAQ</a></li>
                         <li><a href="contact.html">Kapcsolat</a></li>
                     </ul>
                 </nav>
-                <div class="mobil-menu-close-btn">
-                    <i class="fa-solid fa-xmark"></i>
-                </div>
                 <div class="menu-toggle">
                     <i class="fas fa-bars"></i>
                 </div>
             </nav>
             <div class="header-h1">
-                <h1>Szolgáltatásaink</h1>
+                <h1>Gyakran Ismételt Kérdések</h1>
             </div>
             
         </header>
         <main>
-            <section class="services">
-                <div class="card-container">
-                    <div class="card first-card">
-                        <p class="subtitle">Miben tudunk segíteni</p>
-                        <h2 class="title">Iphone szervíz Szolgáltatásaink</h2>
+            <section class="FAQ">
+                <div class="sidebar">
+                    <div class="faq-nav card-bg">
+                        <ul>
+                            <li><a class="selected-category" href="#" onclick="showCategory('category1')">Általános</a></li>
+                            <li><a href="#" onclick="showCategory('category2')">Szervízfutár</a></li>
+                            <li><a href="#" onclick="showCategory('category3')">Kategória 3</a></li>
+                        </ul>
                     </div>
-                    <div class="card">
-                        <img src="images/Apple-Iphone-15-Green-PNG.png" alt="">
-                        <div class="overlay">
-                            <p><span><i class="fa-regular fa-clock"></i></span>Személyesen 1 órán belül</p>
-                            <h3>Akkumulátor csere</h2>
-                            <a href="" class="card-btn">Megnézem</a>
+                    <div class="cant-find-answer card-bg">
+                        <h3>Nem találod a választ?</h3>
+                        <p>Nem kaptál választ a kérdésére? Lépj velünk kapcsolatba, hogy segíthessünk!</p>
+                        <a href="contact.html" class="btn">Kapcsolat</a>
+                    </div>
+                </div>
+                <div class="content card-bg">
+                    <div id="category1" class="category">
+                        <h2>Kategória 1 Kérdések</h2>
+                        <div class="container">
+                            <div class="question-container">
+                                <div class="question" onclick="toggleAnswer(this)">Kérdés 1-1</div>
+                                <div class="answer">An electronic device not switching on can be the result of many things. Most commonly there is a fault with the mainboard or the battery. We can diagnose a range of issues and replace only what's needed to be.</div>
+                            </div>
+                            <div class="question-container">
+                                <div class="question" onclick="toggleAnswer(this)">Kérdés 1-2</div>
+                                <div class="answer">Unfortunately, due to health and safety laws we cannot allow members of the public on our premises so we can only accept mail deliveries of your devices.</div>
+                            </div>
                         </div>
                     </div>
-                    <div class="card">
-                        <img src="images/Apple-Iphone-15-Green-PNG.png" alt="">
-                        <div class="overlay">
-                            <h3>Akkumulátor csere</h2>
-                            <a href="" class="card-btn">Megnézem</a>
+                    <div id="category2" class="category" style="display:none;">
+                        <h2>Kategória 2 Kérdések</h2>
+                        <div class="container">
+                            <div class="question-container">
+                                <div class="question" onclick="toggleAnswer(this)">Kérdés 2-1</div>
+                                <div class="answer">An electronic device not switching on can be the result of many things. Most commonly there is a fault with the mainboard or the battery. We can diagnose a range of issues and replace only what's needed to be.</div>
+                            </div>
+                            <div class="question-container">
+                                <div class="question" onclick="toggleAnswer(this)">Kérdés 2-2</div>
+                                <div class="answer">Unfortunately, due to health and safety laws we cannot allow members of the public on our premises so we can only accept mail deliveries of your devices.</div>
+                            </div>
                         </div>
                     </div>
-                    <div class="card">
-                        <img src="images/Apple-Iphone-15-Green-PNG.png" alt="">
-                        <div class="overlay">
-                            <h3>Akkumulátor csere</h2>
-                            <a href="" class="card-btn">Megnézem</a>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img src="images/Apple-Iphone-15-Green-PNG.png" alt="">
-                        <div class="overlay">
-                            <h3>Akkumulátor csere</h2>
-                            <a href="" class="card-btn">Megnézem</a>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img src="images/Apple-Iphone-15-Green-PNG.png" alt="">
-                        <div class="overlay">
-                            <h3>Akkumulátor csere</h2>
-                            <a href="" class="card-btn">Megnézem</a>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img src="images/Apple-Iphone-15-Green-PNG.png" alt="">
-                        <div class="overlay">
-                            <h3>Akkumulátor csere</h2>
-                            <a href="" class="card-btn">Megnézem</a>
+                    <div id="category3" class="category" style="display:none;">
+                        <h2>Kategória 3 Kérdések</h2>
+                        <div class="container">
+                            <div class="question-container">
+                                <div class="question" onclick="toggleAnswer(this)">Kérdés 3-1</div>
+                                <div class="answer">An electronic device not switching on can be the result of many things. Most commonly there is a fault with the mainboard or the battery. We can diagnose a range of issues and replace only what's needed to be.</div>
+                            </div>
+                            <div class="question-container">
+                                <div class="question" onclick="toggleAnswer(this)">Kérdés 3-2</div>
+                                <div class="answer">Unfortunately, due to health and safety laws we cannot allow members of the public on our premises so we can only accept mail deliveries of your devices.</div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </section>
+
         </main>
         <footer>
             <div class="footer-container">
@@ -150,5 +151,6 @@
             </div>
         </footer>
     <script src="js/main.js" async defer></script>
+    <script src="js/faq.js" async defer></script>
     </body>
 </html>

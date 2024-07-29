@@ -8,13 +8,13 @@ function showCategory(categoryId) {
     document.getElementById(categoryId).style.display = 'block';
     
     // Az összes kategória link normál stílusának visszaállítása
-    var links = document.querySelectorAll('.faq-nav a');
+    var links = document.querySelectorAll('.sidebar a');
     for (var i = 0; i < links.length; i++) {
         links[i].classList.remove('selected-category');
     }
     
     // A kiválasztott kategória linkjének vastag stílus beállítása
-    var selectedLink = document.querySelector('.faq-nav a[href="#"][onclick="showCategory(\'' + categoryId + '\')"]');
+    var selectedLink = document.querySelector('.sidebar a[href="#"][onclick="showCategory(\'' + categoryId + '\')"]');
     if (selectedLink) {
         selectedLink.classList.add('selected-category');
     }

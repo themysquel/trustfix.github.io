@@ -25,8 +25,7 @@ section{
 
 .FAQ{
     display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
+    gap: 2rem;
 }
 
 .card-bg{
@@ -41,20 +40,14 @@ section{
     flex: 1;
 }
 
-.faq-container{
-    flex: 2;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+
+.faq-nav{
+    margin-bottom: 2rem;
 }
 
-.faq-nav ul{
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 20px;
+.faq-nav ul li{
+    margin-bottom: 1rem;
 }
-
 .faq-nav ul li a{
     color: var(--title-blue);
     font-size: 1.25rem;
@@ -121,8 +114,8 @@ section{
 
 @media screen and (max-width: 768px) {
     .FAQ{
-        flex-direction: column-reverse;
-        gap: 2rem;
+        flex-direction: column;
+        gap: 0rem;
     }
 
     .FAQ h2{
@@ -133,14 +126,14 @@ section{
         font-size: 1rem;
     }
 
-    .faq-container{
-        gap: 20px;
-    }
-
     .faq-nav ul li a{
         font-size: 1rem;
     }
 
+    .sidebar{
+        display: flex;
+        flex-direction: column-reverse;
+    }
     .cant-find-answer{
         margin-bottom: 4rem;
     }

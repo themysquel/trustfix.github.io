@@ -3,6 +3,10 @@
 /* Általános Beállítások */
 @import url(style.css);
 
+section{
+    max-width: 1200px;
+    margin: 4rem auto;
+}
 
 .contact-h3{
     color: var(--title-blue);
@@ -11,20 +15,12 @@
 }
 
 /* Bolt elérhetőség */
-.contact-shop .container{
-    gap: 20px;
-    margin-top: 2rem;
-}
-
 .shop-card{
-    flex: 1;
-}
-
-.address{
     background-color: white;
     box-shadow: 0 0 30px 5px rgba(0,0,0,8%);
     border-radius: 30px;
     border: 1px solid #e3e6ea;
+    margin: 2rem 0;
     padding: 2rem;
     
 }
@@ -39,7 +35,7 @@
     gap: 10px;
 }
 
-.googleMaps iframe{
+.google-map :nth-child(1){
     border-radius: 30px;
 }
 

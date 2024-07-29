@@ -15,8 +15,6 @@
     --white: white; /* gomb szöveg szín */
     --title-blue: #083260;
     --body-bg: rgb(252, 252, 252);
-
-    --section-width: 1200px;
 }
 
 /* Betűkészlet és alapértelmezett stílusok */
@@ -24,7 +22,7 @@ body {
     font-family: "Poppins", sans-serif;
     font-weight: 400;
     font-size: 0.875rem;
-    line-height: 1.7;
+    line-height: 1.5;
     color: #ffffff;
     letter-spacing: 0.224px;
     overflow-x: hidden;
@@ -32,23 +30,15 @@ body {
 
 .body-bg{background-color: var(--body-bg);}
 
-section{
-    width: min(100% - 2rem);
-    max-width: var(--section-width);
-    margin-inline: auto;
-    margin-top: clamp(4.5rem, 4.3261rem + 0.8696vw, 5rem);
-}
-
-
 /* Link stílusok */
 ul{list-style-type: none;}
 
 a {text-decoration: none;}
 
 h1{
-    font-size: clamp(2.375rem, 1.8523rem + 2.6136vw, 3.8125rem); /*Minimum és maximum érték clam-generatorban*/
+    font-size: 3.125rem;
     font-weight: 600;
-    line-height: 1.2;
+    line-height: 1.3;
 }
 
 p{
@@ -56,7 +46,7 @@ p{
 }
 
 .title{
-    font-size: clamp(2.5rem, 2.3182rem + 0.9091vw, 3rem); /*Max 48px - Min 40px*/
+    font-size: 3rem;
     color: var(--title-blue);
     letter-spacing: -.016em;
     line-height: 1.2;
@@ -101,10 +91,6 @@ p{
     font-size: 0.75rem;
 }
 
-.d-flex{ /*Display:flex class ,hogy ne kelljen mindig ismételni*/
-    display: flex;
-}
-
 .fast-service-badge{
     color: var(--title-blue);
     background-color: rgb(209, 164, 15);
@@ -117,56 +103,11 @@ p{
     padding-right: 5px;
 }
 
-#website-loader{
-    background-color: white;
-    position: fixed;
-    height: 100vh;
-    width: 100%;
-    z-index: 99999;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
 
-.preload-text{
-    color: #083260;
-    font-size: 82px;
-    letter-spacing: 10px;
-    width: 100%;
-    white-space: nowrap;
-    overflow: hidden;
-    animation: preload 3s ease;
-}
-@keyframes preload{
-    0%{
-        transform: translateY(-500px);
-    }
-    100%{
-        transform: translateY(0);
-    }
-}
-
-.spinner {
-    border: 16px solid #f3f3f3;
-    border-top: 16px solid #083260;
-    border-radius: 50%;
-    width: 120px;
-    height: 120px;
-    animation: spin 2s linear infinite;
-}
-  
-  @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-  }
-  
 /* NAVBAR GÉPES */
 
 .navbar {
-    width: min(100% - 2rem);
-    max-width: var(--section-width);
+    max-width: 1200px; /* Maximális szélesség 1440px */
     margin: 0rem auto; /* Középre igazítás */
     display: flex;
     justify-content: space-between;
@@ -204,10 +145,6 @@ p{
     position: relative;
 }
 
-.dropdown-btn{
-    display: none;
-}
-
 .dropdown-menu {
     display: none;
     position: absolute;
@@ -219,12 +156,11 @@ p{
     left: 20px;
     width: 200px; /* Szélesség beállítása */
 }
-@media (hover: hover) and (pointer: fine) { 
-    /* :hover stílusok, amelyek csak nem érintőképernyős eszközökön érvényesek */
-    .dropdown:hover .dropdown-menu {
-        display: block;
-    }
+
+.dropdown:hover .dropdown-menu {
+    display: block;
 }
+
 .dropdown-menu.show {
     display: block; /* Aktív dropdown menü megjelenítése */
 }
@@ -249,18 +185,12 @@ p{
     cursor: pointer;
 }
 
-.mobil-menu-close-btn{
-    display: none;
-}
-
 /* Font Awesome ikonok */
 
 .fa-bars,
 .fa-chevron-down {
     margin-left: 5px;
 }
-
-
 
 /* HEADER SZEKCIÓ BACKGROUND ÉS FŐCÍM HA NEM HOMEPAGE */
 .not-home-header{
@@ -274,14 +204,14 @@ p{
 }
 
 .header-h1{
-    width: min(100% - 2rem); /* 2rem margin mindig*/
     max-width: 1200px;
     margin: 0 auto;
     margin-top: 4rem;
 }
 .header-h1 h1{
-    font-size: clamp(2.25rem, 1.8409rem + 2.0455vw, 3.375rem); /* Max: 54 px min: 36px*/
+    font-size: 54px;
     font-weight: 200;
+
 }
 
 /* FOOTER GÉPES */
@@ -289,14 +219,12 @@ footer{
     background-color: var(--btn-font);
     align-items: center;
     align-content: center;
-    margin-top: 4rem;
+    padding: 4rem 0 1rem 0;
 }
 
 .footer-container{
-    width: min(100% - 2rem);
-    max-width: var(--section-width);
-    margin-inline: auto;
-    margin-top: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -332,8 +260,7 @@ footer{
 }
 
 .credit{
-    width: min(100% - 2rem);
-    max-width: var(--section-width);
+    max-width: 1200px;
     margin: 2rem auto;
     padding: 0.5rem;
     text-align: center;
@@ -343,41 +270,32 @@ footer{
 .credit p{color: var(--title-blue);}
 
 @media screen and (max-width: 768px) {
+    h1{font-size: 1.8rem;}
+    section {padding: 0 2rem;} /* MOBIL NÉZET PADDING A SZEKCIÓKNAK */ 
+    .title{font-size: 2.5rem;}
     .subtitle{font-size: 1rem;}
 
-
-    .logo{
-        z-index: 100;
-        color: black;
-    }
     .navbar{
-        padding-block: 2rem;
+        padding: 2rem 2rem;
         z-index: 100;
     }
 
     .nav-links {
+
         flex-direction: column;
-        position: absolute;
-        justify-content: center;
+        position: fixed;
         top: 0;
-        right: -100%; /* Kezdő pozíció a képernyőn kívül */
+        left: -100%; /* Kezdő pozíció a képernyőn kívül */
         height: 100%;
-        width: 100%; /* Fél képernyős szélesség */
+        width: 50%; /* Fél képernyős szélesség */
         background-color: #ffffff;
         padding: 10px;
         z-index: 1;
-        transition: right 0.3s ease; /* Animáció hozzáadása */
-        font-size: 1.5rem;
-    }
-    .nav-links ul li{
-        align-items: end;
+        transition: left 0.3s ease; /* Animáció hozzáadása */
     }
 
-    body.no-scroll { /*Letiltja a scroll-t ha a mobil menü active*/
-        overflow: hidden;
-    }
     .nav-links.active {
-        right: 0; /* Aktív állapotban bal oldalról beúszik */
+        left: 0; /* Aktív állapotban bal oldalról beúszik */
     }
 
     .menu-toggle {
@@ -391,41 +309,8 @@ footer{
         width: 100%; /* Teljes szélesség */
     }
 
-    .dropdown-link-container{
-        display: flex;
-        align-items: center;
-    }
-    .dropdown-link-container a i{ /*Mobil nézetben nem látszik az alap dropdown-btn*/
-        /*Azért van szükség két külön gombra, mert különben gépes nézetben bezavarodik a :hover*/
-        /*Mert ha rákattint és megjelenik, akkor csak akkor tűnik el ha megint rákattint, hiába viszi el az egeret*/
-        display: none;
-    }
-    .dropdown-btn{ /*Mobil nézetben megjelenítjük a mobil dropdown Btn-t*/
-        color: black;
-        display: block;
-    }
-
     .dropdown-menu.show {
         display: block; /* Aktív dropdown menü megjelenítése */
-    }
-
-    .mobil-menu-close-btn{
-        cursor: pointer;
-        color: var(--btn-font);
-        font-size: 1.5rem;
-        z-index: 100;
-        position: absolute;
-        right: 1rem;
-        border: 1px solid var(--title-blue);
-        border-radius: 50%;
-        width: 45px;
-        height: 45px;
-    }
-    .mobil-menu-close-btn.active{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
     }
 
     /*HEADER FŐCÍM HA NEM HOMEPAGE*/
@@ -433,15 +318,13 @@ footer{
         height: 250px;
     }
     .header-h1{
-        margin-top: 1.5rem;
+        margin: 1.5rem 0rem 0rem 2rem;
     }
-
-    .d-flex{ /*Mobil nézetben column elrendezés a dp-flex classhoz ,hogy ne kelljen mindig ismételni*/
-        flex-direction: column;
-    }
+    .header-h1 h1{font-size: 36px;}
     
 
     /*FOOTER*/
+    footer{padding: 4rem 2rem 0rem 2rem;}
     .footer-container{flex-direction: column;}
     .footer-content:nth-child(1), .footer-content:nth-child(2), .footer-content:nth-child(3), .footer-content:nth-child(4){width: 100%;}
     .footer-content h2{margin-top: 2rem;}

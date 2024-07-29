@@ -23,9 +23,12 @@
                     <ul class="nav-links">
                         <li><a href="index.html">Home</a></li>
                         <li class="dropdown">
-                            <a href="services.html">Szolgáltatások <i class="fas fa-chevron-down"></i></a>
+                            <div class="dropdown-link-container">
+                                <a href="services.html">Szolgáltatások <i class="fas fa-chevron-down"></i></a>
+                                <span class="dropdown-btn"><i class="fas fa-chevron-down"></i></span>
+                            </div>
                             <ul class="dropdown-menu">
-                                <li><a href="#">Akkumulátor csere</a></li>
+                                <li><a href="subpages/akkumulatorcsere.html">Akkumulátor csere</a></li>
                                 <li><a href="#">Kijelző csere</a></li>
                                 <li><a href="#">Töltőport csere</a></li>
                             </ul>
@@ -35,6 +38,9 @@
                         <li><a href="contact.html">Kapcsolat</a></li>
                     </ul>
                 </nav>
+                <div class="mobil-menu-close-btn">
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
                 <div class="menu-toggle">
                     <i class="fas fa-bars"></i>
                 </div>
@@ -47,6 +53,13 @@
         <main>
             <section class="FAQ">
                 <div class="sidebar">
+                    <div class="cant-find-answer card-bg">
+                        <h3>Nem találod a választ?</h3>
+                        <p>Nem kaptál választ a kérdésére? Lépj velünk kapcsolatba, hogy segíthessünk!</p>
+                        <a href="contact.html" class="btn">Kapcsolat</a>
+                    </div>
+                </div>
+                <div class="faq-container">
                     <div class="faq-nav card-bg">
                         <ul>
                             <li><a class="selected-category" href="#" onclick="showCategory('category1')">Általános</a></li>
@@ -54,49 +67,44 @@
                             <li><a href="#" onclick="showCategory('category3')">Kategória 3</a></li>
                         </ul>
                     </div>
-                    <div class="cant-find-answer card-bg">
-                        <h3>Nem találod a választ?</h3>
-                        <p>Nem kaptál választ a kérdésére? Lépj velünk kapcsolatba, hogy segíthessünk!</p>
-                        <a href="contact.html" class="btn">Kapcsolat</a>
-                    </div>
-                </div>
-                <div class="content card-bg">
-                    <div id="category1" class="category">
-                        <h2>Kategória 1 Kérdések</h2>
-                        <div class="container">
-                            <div class="question-container">
-                                <div class="question" onclick="toggleAnswer(this)">Kérdés 1-1</div>
-                                <div class="answer">An electronic device not switching on can be the result of many things. Most commonly there is a fault with the mainboard or the battery. We can diagnose a range of issues and replace only what's needed to be.</div>
-                            </div>
-                            <div class="question-container">
-                                <div class="question" onclick="toggleAnswer(this)">Kérdés 1-2</div>
-                                <div class="answer">Unfortunately, due to health and safety laws we cannot allow members of the public on our premises so we can only accept mail deliveries of your devices.</div>
+                    <div class="content card-bg">
+                        <div id="category1" class="category">
+                            <h2>Kategória 1 Kérdések</h2>
+                            <div class="container">
+                                <div class="question-container">
+                                    <div class="question" onclick="toggleAnswer(this)">Kérdés 1-1</div>
+                                    <div class="answer">An electronic device not switching on can be the result of many things. Most commonly there is a fault with the mainboard or the battery. We can diagnose a range of issues and replace only what's needed to be.</div>
+                                </div>
+                                <div class="question-container">
+                                    <div class="question" onclick="toggleAnswer(this)">Kérdés 1-2</div>
+                                    <div class="answer">Unfortunately, due to health and safety laws we cannot allow members of the public on our premises so we can only accept mail deliveries of your devices.</div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div id="category2" class="category" style="display:none;">
-                        <h2>Kategória 2 Kérdések</h2>
-                        <div class="container">
-                            <div class="question-container">
-                                <div class="question" onclick="toggleAnswer(this)">Kérdés 2-1</div>
-                                <div class="answer">An electronic device not switching on can be the result of many things. Most commonly there is a fault with the mainboard or the battery. We can diagnose a range of issues and replace only what's needed to be.</div>
-                            </div>
-                            <div class="question-container">
-                                <div class="question" onclick="toggleAnswer(this)">Kérdés 2-2</div>
-                                <div class="answer">Unfortunately, due to health and safety laws we cannot allow members of the public on our premises so we can only accept mail deliveries of your devices.</div>
+                        <div id="category2" class="category" style="display:none;">
+                            <h2>Kategória 2 Kérdések</h2>
+                            <div class="container">
+                                <div class="question-container">
+                                    <div class="question" onclick="toggleAnswer(this)">Kérdés 2-1</div>
+                                    <div class="answer">An electronic device not switching on can be the result of many things. Most commonly there is a fault with the mainboard or the battery. We can diagnose a range of issues and replace only what's needed to be.</div>
+                                </div>
+                                <div class="question-container">
+                                    <div class="question" onclick="toggleAnswer(this)">Kérdés 2-2</div>
+                                    <div class="answer">Unfortunately, due to health and safety laws we cannot allow members of the public on our premises so we can only accept mail deliveries of your devices.</div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div id="category3" class="category" style="display:none;">
-                        <h2>Kategória 3 Kérdések</h2>
-                        <div class="container">
-                            <div class="question-container">
-                                <div class="question" onclick="toggleAnswer(this)">Kérdés 3-1</div>
-                                <div class="answer">An electronic device not switching on can be the result of many things. Most commonly there is a fault with the mainboard or the battery. We can diagnose a range of issues and replace only what's needed to be.</div>
-                            </div>
-                            <div class="question-container">
-                                <div class="question" onclick="toggleAnswer(this)">Kérdés 3-2</div>
-                                <div class="answer">Unfortunately, due to health and safety laws we cannot allow members of the public on our premises so we can only accept mail deliveries of your devices.</div>
+                        <div id="category3" class="category" style="display:none;">
+                            <h2>Kategória 3 Kérdések</h2>
+                            <div class="container">
+                                <div class="question-container">
+                                    <div class="question" onclick="toggleAnswer(this)">Kérdés 3-1</div>
+                                    <div class="answer">An electronic device not switching on can be the result of many things. Most commonly there is a fault with the mainboard or the battery. We can diagnose a range of issues and replace only what's needed to be.</div>
+                                </div>
+                                <div class="question-container">
+                                    <div class="question" onclick="toggleAnswer(this)">Kérdés 3-2</div>
+                                    <div class="answer">Unfortunately, due to health and safety laws we cannot allow members of the public on our premises so we can only accept mail deliveries of your devices.</div>
+                                </div>
                             </div>
                         </div>
                     </div>

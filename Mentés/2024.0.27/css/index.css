@@ -5,7 +5,7 @@
 
 header{
     width: 100%;
- /* Az elem magassága a nézőablak magasságához igazodik */
+    height: 100vh; /* Az elem magassága a nézőablak magasságához igazodik */
     background: url(../images/hero-bg.png) center center/cover no-repeat;
     position: relative;
     overflow: hidden;
@@ -14,19 +14,17 @@ header{
 /*HERO SZEKCIÓ BELEÁGYAZVA A HEADERBE*/
 
 #hero{
-    display: none;
+    display: flex;
+    max-width: 1200px; /* Maximális szélesség 1440px */
+    margin: 0rem auto; /* Középre igazítás */
+    display: flex;
     justify-content: flex-start;
-    flex-wrap: wrap;
     align-items: start;
     overflow-wrap: break-word;
-    
-}
-.hero-animation{
     animation: SlideDownAndBounce 0.7s ease-out;
-}   
+}
 
 .hero-content{
-    flex: 1;
     display: flex;
     flex-direction: column;
     align-items: start;
@@ -35,12 +33,10 @@ header{
 }
 
 #hero img{
-    flex: 1;
+    height: auto;
     max-width: 100%;
     vertical-align: top;
-    width: 400px;
-    height: fit-content;
-    object-fit: cover;
+    
 }
 
 @keyframes SlideDownAndBounce{
@@ -60,6 +56,8 @@ header{
     display: flex;
     align-items: center;
     justify-content: center;
+    max-width: 1200px;
+    margin: 5rem auto;
     width: 100%;
     position: relative;
 }
@@ -157,6 +155,8 @@ header{
 /*SZOLGÁLTATÁSOK SZEKCIÓ*/
 
 #services {
+    max-width: 1200px;
+    margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
@@ -253,6 +253,8 @@ header{
 
 /*ABOUT US SZEKCIÓ*/
 #about-us{
+    max-width: 1200px;
+    margin: 5rem auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
@@ -278,6 +280,8 @@ header{
 
 /*GYAKRAN ISMÉTELT KÉRDÉSEK SZEKCIÓ*/
 #faq{
+    max-width: 1200px;
+    margin: 5rem auto;
     text-align: center;
 }
 
@@ -330,22 +334,21 @@ header{
 
     header{
         background: url(../images/hero-bg-mobile.png) center center/cover no-repeat;
-        height: auto;
     }
     
 
     #hero{
         flex-direction: column;
         justify-content: center;
-        margin: 0 auto;
-        height: auto;
+        width: 100%;
+
     }
 
     #hero img{
-        width: 300px;
-        height: auto;
+        width: 100%;
+        height: 100%;
     }
-    .hero-content{padding-block: 2rem;};
+    .hero-content{padding: 1rem 0;}
 
     
 
@@ -353,12 +356,8 @@ header{
         grid-auto-columns: 100%;
     }  
 
-    .service-swiper{
-        padding-inline: 1rem;
-    }
-
-    .service-swiper i:first-child{left: 5px;} /*Mobil nézetben a carousel nyila a képernyő szélére*/
-    .service-swiper i:last-child{right: 5px;} /*Mobil nézetben a carousel nyila a képernyő szélére*/
+    .service-swiper i:first-child{left: 0;} /*Mobil nézetben a carousel nyila a képernyő szélére*/
+    .service-swiper i:last-child{right: 0;} /*Mobil nézetben a carousel nyila a képernyő szélére*/
 
     .card, .faq-content {
         flex: 1 1 100%;
